@@ -90,7 +90,7 @@ if selected == "How to use":
         st.image(image5)
         st.write("4. After filling in the information click on analyze and you will get the ranking as shown")
         image6 = Image.open('img/image6.png')
-        st.image(image5)
+        st.image(image6)
 
 if selected == "Analyze":
     st.title("Let's get started")
