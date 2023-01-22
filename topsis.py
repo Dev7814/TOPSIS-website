@@ -267,7 +267,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;'>Team 404 FOUND</a></p>
+<p>Developed with ❤ by <a style='display: block; text-align: center;'>Kushagar Bansal</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
