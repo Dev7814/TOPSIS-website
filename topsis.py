@@ -115,23 +115,28 @@ if selected == "How to use":
 
 if selected == "Analyze":
     st.title("Let's get started")
-    with st.container():
-        left_column, right_column = st.columns(2)
-        with left_column:
-            genre = st.radio("What do you want to do",
-                             ('I want to analyze the tweets from a twitter account', 'I want to analyze a topic', 'I want to analyze my dataset'))
+    st.write("Please upload your dataset")
+    uploaded_file = st.file_uploader("Choose a file")
+    if uploaded_file is not None:
+        data = pd.read_excel(uploaded_file)
+        st.write(data)
+#     with st.container():
+#         left_column, right_column = st.columns(2)
+#         with left_column:
+#             genre = st.radio("What do you want to do",
+#                              ('I want to analyze the tweets from a twitter account', 'I want to analyze a topic', 'I want to analyze my dataset'))
 
-            if genre == "I want to analyze the tweets from a twitter account":
-                st.write("You will be redirected to another website. Please [Click Here >](https://project-se-ts-1.streamlit.app/)")
+#             if genre == "I want to analyze the tweets from a twitter account":
+#                 st.write("You will be redirected to another website. Please [Click Here >](https://project-se-ts-1.streamlit.app/)")
 
-            if genre == "I want to analyze a topic":
-                st.write("You will be redirected to another website. Please [Click Here >](https://project-se-ts-3.streamlit.app/)")
+#             if genre == "I want to analyze a topic":
+#                 st.write("You will be redirected to another website. Please [Click Here >](https://project-se-ts-3.streamlit.app/)")
 
-            if genre == "I want to analyze my dataset":
-                st.write("You will be redirected to another website. Please [Click Here >](https://project-se-ts-2.streamlit.app/)")
+#             if genre == "I want to analyze my dataset":
+#                 st.write("You will be redirected to another website. Please [Click Here >](https://project-se-ts-2.streamlit.app/)")
             
-        with right_column:
-            st_lottie(lottie_coding, height=250, key="coding")
+#         with right_column:
+#             st_lottie(lottie_coding, height=250, key="coding")
         
     with st.container():
         st.subheader("Before going further please read the following instruction :-")
