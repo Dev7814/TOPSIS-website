@@ -5,7 +5,7 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 
-st.set_page_config(page_title="Twitter Sentiment Analysis", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="TOPSIS", page_icon=":tada:", layout="wide")
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -24,7 +24,7 @@ selected = option_menu(None, ["Home", "How to use", "Analyze", 'Contact Us'],
     menu_icon="cast", default_index=0, orientation="horizontal")
 
 if selected == "Home":
-    st.title("Twitter Sentiment Analysis")
+    st.title("TOPSIS")
     st.subheader("Hey there!!! :wave: Welcome to our service")
     
     with st.container():
