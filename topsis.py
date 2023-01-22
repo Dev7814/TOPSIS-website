@@ -31,8 +31,7 @@ if selected == "Home":
         left_column, right_column = st.columns(2)
         with left_column:
             st.subheader("Wondering what we do?")
-            st.markdown("We **_analyze_** the tweets for you guys to")
-            st.write("1. Clear your doubts\n 2. Authenticity of rumors\n 3. Give you a topic for your gossips\n 4. Help in your philosophical research\n and much more!!!")
+            st.markdown("We **_analyze_** the situation help you make a better decisions")
             st.write("Go to the Analyze tab to see the magic:sparkles::sparkles:")
         with right_column:
             st_lottie(lottie_coding3, height=400, key="coding")
@@ -41,9 +40,9 @@ if selected == "Home":
         st.subheader("How?!")
         left_column, right_column = st.columns(2)
         with left_column:
-            st.markdown('<div style="text-align: justify;">We use a sentiment analysis technique which is very popular in the world of Machine Learning and Natural Language Processing (NLP). Sentiment analysis refers to identifying as well as classifying the sentiments that are expressed in the text source. Tweets are often useful in generating a vast amount of sentiment data upon analysis. These data are useful in understanding the opinion of the people about a variety of topics. Therefore we developed an Automated Machine Learning Sentiment Analysis Model in order to compute the customer perception.</div>', unsafe_allow_html=True)
+            st.markdown('<div style="text-align: justify;">We use a multi-criteria decision analysis (MCDA) and TOPSIS is one of the way to implement it.</div>', unsafe_allow_html=True)
             st.write("\n")
-            st.markdown('<div style="text-align: justify;">Twitter sentiment analysis allows you to keep track of what is being said about your product or service on social media, and can help you detect angry customers or negative mentions before they they escalate. At the same time, Twitter sentiment analysis can provide valuable insights that drive decisions.</div>', unsafe_allow_html=True)
+            st.markdown('<div style="text-align: justify;">It is a method of compensatory aggregation that compares a set of alternatives, normalising scores for each criterion and calculating the geometric distance between each alternative and the ideal alternative, which is the best score in each criterion. The weights of the criteria in TOPSIS method can be calculated using Ordinal Priority Approach, Analytic hierarchy process, etc. An assumption of TOPSIS is that the criteria are monotonically increasing or decreasing. Normalisation is usually required as the parameters or criteria are often of incongruous dimensions in multi-criteria problems. Compensatory methods such as TOPSIS allow trade-offs between criteria, where a poor result in one criterion can be negated by a good result in another criterion. This provides a more realistic form of modelling than non-compensatory methods, which include or exclude alternative solutions based on hard cut-offs. An example of application on nuclear power plants is provided in.</div>', unsafe_allow_html=True)
             st.write("\n")
             st.write("\n")
             st.write("\n")
