@@ -56,6 +56,9 @@ if selected == "Home":
 #             st.write("Here is an instance to show you guys the accuracy of our model")
         image = Image.open('img/image.png')
         st.image(image)
+        
+        image1 = Image.open('img/image1.png')
+        st.image(image1)
             
 if selected == "How to use":
     with st.container():
