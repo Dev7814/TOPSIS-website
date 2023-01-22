@@ -126,9 +126,60 @@ if selected == "Analyze":
         collect_numbers = lambda x : [int(i) for i in re.split("[^0-9]", x) if i != ""]
         numbers = st.text_input("Enter the weights (Please input the numbers separated with a single comma)")
         string = st.text_input("Enter the impacts (Please input + or - separeated with a single comma)")
-        impacts = string.split()
+        impact = string.split(",")
         weights = collect_numbers(numbers)
-        st.write(impacts[0])
+        
+        go = st.button('Analyze')
+        if go:
+            df = data.drop(data.columns[[0]], axis=1)
+            
+            sos = []
+            for i in range(df.shape[1]):
+                sum = 0
+                for j in range(df.shape[0]):
+                    sum = sum + df.iloc[j,i]**2
+                sos.append(sum)
+            
+            rosos = np.sqrt(sos)
+            
+            for i in range(df.shape[1]):
+                for j in range(df.shape[0]):
+                    df.iloc[j,i] = df.iloc[j,i] / rosos[i]
+            
+            for i in range(df.shape[1]):
+                for j in range(df.shape[0]):
+                    df.iloc[j,i] = df.iloc[j,i] * weights[i]
+            
+            idbest = []
+            idworst = []
+            
+            for i in range(df.shape[1]):
+                if impact[i] == '+':
+                    idbest.append(df.iloc[:,1].max(axis=0))
+                    idworst.append(df.iloc[:,1].min(axis=0))
+                
+                elif impact[i] == '-':
+                    idbest.append(df.iloc[:,1].min(axis=0))
+                    idworst.append(df.iloc[:,1].max(axis=0))
+            
+            sp = []
+            sn = []
+            for i in range(df.shape[0]):
+                sump = 0
+                sumn = 0
+                for j in range(df.shape[1]):
+                    sump = sump + (df.iloc[i,j] - idbest[j])**2
+                    sumn = sumn + (df.iloc[i,j] - idworst[j])**2
+             
+            sp = np.sqrt(sp)
+            sn = np.sqrt(sn)
+            
+            p = []
+            for i in range(df.shape[0]):
+                p.append(sn[i] / (sp[i]+sn[i]))
+            
+            data['P'] = p
+            data['Rank'] = data['P'].rank()
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
