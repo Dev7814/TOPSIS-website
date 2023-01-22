@@ -119,7 +119,7 @@ if selected == "Analyze":
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
         data = pd.read_excel(uploaded_file)
-        st.write(data)
+        st.write(data.head())
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
