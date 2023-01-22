@@ -124,12 +124,12 @@ if selected == "Analyze":
         st.write(data)
         
         collect_numbers = lambda x : [int(i) for i in re.split("[^0-9]", x) if i != ""]
-        collect_string = lambda x : [str(x) for i in re.split("[^+-]", x) if i != ""]
+        collect_string = lambda x : [str(x) for i in re.split("[+-]", x) if i != ""]
         numbers = st.text_input("Enter the weights (Please input the numbers separated with a single comma)")
         impacts = st.text_input("Enter the impacts (Please input + or - separeated with a single comma)")
         impacts = collect_string(impacts)
         weights = collect_numbers(numbers)
-        st.write(impacts)
+        st.write(impacts[0])
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
