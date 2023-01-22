@@ -118,8 +118,9 @@ if selected == "Analyze":
     st.write("Please upload your dataset")
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
-        data = pd.read_excel(uploaded_file)
-        st.write(data.head())
+        dataframe = pd.read_excel(uploaded_file)
+        st.write('Here is the sample of the data you provided')
+        st.write(dataframe.head())
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
