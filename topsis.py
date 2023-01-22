@@ -6,6 +6,7 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import numpy as np
 import pandas as pd
+import re
 
 st.set_page_config(page_title="TOPSIS", page_icon=":tada:", layout="wide")
 
