@@ -51,11 +51,11 @@ if selected == "Home":
         st.subheader("Implementation")
         left_column, right_column = st.columns(2)
         with left_column:
-            st.markdown('<div style="text-align: justify;">We attempted to do some basic NLP techniques using TextBlob library. The tweets are being extracted using the twitter API named tweepy. After the extracting the dataset we do some pre-processing like stemming, tokenizing, etc. After that we use the inbuilt Naive Bayes model to classify the tweets and display the our analysis to you guys through data visualization.</div>', unsafe_allow_html=True)
-            st.write("\n")
-            st.write("Here is an instance to show you guys the accuracy of our model")
-            image6 = Image.open('img/image6.png')
-            st.image(image6)
+#             st.markdown('<div style="text-align: justify;">We attempted to do some basic NLP techniques using TextBlob library. The tweets are being extracted using the twitter API named tweepy. After the extracting the dataset we do some pre-processing like stemming, tokenizing, etc. After that we use the inbuilt Naive Bayes model to classify the tweets and display the our analysis to you guys through data visualization.</div>', unsafe_allow_html=True)
+#             st.write("\n")
+#             st.write("Here is an instance to show you guys the accuracy of our model")
+            image = Image.open('img/image.png')
+            st.image(image)
             
 if selected == "How to use":
     with st.container():
