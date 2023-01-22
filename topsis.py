@@ -120,7 +120,7 @@ if selected == "Analyze":
     if uploaded_file is not None:
         data = pd.read_csv(uploaded_file)
         st.write('Here is the sample of the data you provided')
-        st.write(data.head())
+        st.write(data)
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
