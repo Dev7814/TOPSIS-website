@@ -170,6 +170,9 @@ if selected == "Analyze":
                 for j in range(df.shape[1]):
                     sump = sump + (df.iloc[i,j] - idbest[j])**2
                     sumn = sumn + (df.iloc[i,j] - idworst[j])**2
+                
+                sp.append(sump)
+                sn.append(sumn)
              
             sp = np.sqrt(sp)
             sn = np.sqrt(sn)
@@ -180,6 +183,7 @@ if selected == "Analyze":
             
             data['P'] = p
             data['Rank'] = data['P'].rank()
+            st.write(data)
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
