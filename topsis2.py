@@ -11,7 +11,7 @@ import re
 st.set_page_config(page_title="TOPSIS", page_icon=":tada:", layout="wide")
 
 # if selected == "Analyze":
-st.title("Let's get started")
+st.title("TOPSIS")
 st.write("Please upload your dataset (in .csv format only)")
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
