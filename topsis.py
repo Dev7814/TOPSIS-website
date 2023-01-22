@@ -116,7 +116,7 @@ if selected == "How to use":
 
 if selected == "Analyze":
     st.title("Let's get started")
-    st.write("Please upload your dataset")
+    st.write("Please upload your dataset (in .csv format only")
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
         data = pd.read_csv(uploaded_file)
