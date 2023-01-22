@@ -121,6 +121,11 @@ if selected == "Analyze":
         data = pd.read_csv(uploaded_file)
         st.write('Here is the sample of the data you provided')
         st.write(data)
+        
+        collect_numbers = lambda x : [int(i) for i in re.split("[^0-9]", x) if i != ""]
+        numbers = st.input("Enter the weights (Please input the numbers separated with a single comma)")
+        weights = collect_numbers(numbers)
+        st.write(weights[0])
 #     with st.container():
 #         left_column, right_column = st.columns(2)
 #         with left_column:
@@ -139,13 +144,13 @@ if selected == "Analyze":
 #         with right_column:
 #             st_lottie(lottie_coding, height=250, key="coding")
         
-    with st.container():
-        st.subheader("Before going further please read the following instruction :-")
-        st.write("1. Maximum 10 tweets will be displayed due to the data and privacy protection bill")
-        st.write("2. Tweets extraction phase may take some time if number of tweets is large")
-        st.write("3. The analysis is done purely on the basis of some mathematical computation and we aren't responsible for the results")
-        st.write("4. Although it is a result of mathematical coputations but we assure that the results are accurate")
-        st.write("5. We are not intended to target any particular group of people, relegion, culture etc. and not intended to hurt anybody's feelings")
+#     with st.container():
+#         st.subheader("Before going further please read the following instruction :-")
+#         st.write("1. Maximum 10 tweets will be displayed due to the data and privacy protection bill")
+#         st.write("2. Tweets extraction phase may take some time if number of tweets is large")
+#         st.write("3. The analysis is done purely on the basis of some mathematical computation and we aren't responsible for the results")
+#         st.write("4. Although it is a result of mathematical coputations but we assure that the results are accurate")
+#         st.write("5. We are not intended to target any particular group of people, relegion, culture etc. and not intended to hurt anybody's feelings")
 
 if selected == "Contact Us":
 #     Use local CSS
